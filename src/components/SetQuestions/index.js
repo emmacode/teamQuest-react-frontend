@@ -1,5 +1,34 @@
 import React from "react";
+import { askQuestions } from "../../actions/postActions";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import CKEditor from "ckeditor4-react";
 class SetQuestions extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "",
+      course: "",
+      questionPoll: ""
+    };
+
+    this._handleChange = this._handleChange.bind(this);
+    this._handleSubmit = this._handleSubmit.bind(this);
+  }
+  _handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+  _handleSubmit(e) {
+    e.preventDefault();
+    const post = {
+      title: this.state.title,
+      course: this.state.course,
+      questionPoll: this.state.questionPoll
+    };
+    this.props.askQuestions(post);
+  }
   render() {
     return (
       <React.Fragment>
@@ -14,46 +43,41 @@ class SetQuestions extends React.PureComponent {
           </p>
           {/* form style */}
           <div className="form-style form-style-3" id="question-submit">
-            <form>
+            <form onSubmit={this._handleSubmit}>
               <div className="form-inputs clearfix">
                 {/* question title */}
                 <p>
                   <label className="required">
                     Question Title<span>*</span>
                   </label>
-                  <input type="text" id="question-title" />
+                  <input
+                    type="text"
+                    id="question-title"
+                    value={this.state.title}
+                    onChange={this._handleChange}
+                    name="title"
+                  />
                   <span className="form-description">
                     Please choose an appropriate title for the question to
                     answer it even easier .
                   </span>
                 </p>
                 {/* end question title */}
-                {/* topic */}
-                <p>
-                  <label>Topic</label>
-                  <input
-                    type="text"
-                    className="input"
-                    name="question_tags"
-                    id="question_tags"
-                    data-seperator=","
-                  />
-                  <span className="form-description">
-                    Please choose suitable Keywords Ex :{" "}
-                    <span className="color">question , poll</span> .
-                  </span>
-                </p>
-                {/* end topic */}
+
                 {/* COURSE */}
                 <p>
                   <label className="required">
                     Course<span>*</span>
                   </label>
                   <span className="styled-select">
-                    <select>
-                      <option value="">Course</option>
-                      <option value="1">Course 1</option>
-                      <option value="2">Course 2</option>
+                    <select
+                      value={this.state.course}
+                      onChange={this._handleChange}
+                      name="course"
+                    >
+                      <option value="MTH 201">MTH 201</option>
+                      <option value="CSC 201">CSC 201</option>
+                      <option value="CPE 203">CPE 203</option>
                     </select>
                   </span>
                   <span className="form-description">
@@ -62,13 +86,14 @@ class SetQuestions extends React.PureComponent {
                   </span>
                 </p>
                 {/* end course */}
-                {/* question poll */}
+                {/* optional question */}
                 <p className="question_poll_p">
                   <label for="question_poll">Optional Questions</label>
                   <input
                     type="checkbox"
                     id="question_poll"
-                    value="1"
+                    value={this.state.questionPoll}
+                    onchange={this._handleChange}
                     name="question_poll"
                   />
                   <span className="question_poll">
@@ -78,7 +103,7 @@ class SetQuestions extends React.PureComponent {
                     If you want to add options click here .
                   </span>
                 </p>
-                {/* end of question poll */}
+                {/* end of optional question */}
                 <div className="clearfix" />
                 {/* Attachments */}
                 <label>Attachment</label>
@@ -97,7 +122,7 @@ class SetQuestions extends React.PureComponent {
                 {/* end attachment */}
               </div>
               {/* form text-area */}
-              <div id="form-textarea">
+              {/* <div id="form-textarea">
                 <p>
                   <label class="required">
                     Details<span>*</span>
@@ -112,6 +137,9 @@ class SetQuestions extends React.PureComponent {
                     Type the description thoroughly and in detail .
                   </span>
                 </p>
+              </div> */}
+              <div>
+                <CKEditor data="<p>Hello from CKEditor 4!</p>" />
               </div>
               {/* end form text-area */}
               {/* form submit */}
@@ -120,7 +148,7 @@ class SetQuestions extends React.PureComponent {
                   type="submit"
                   id="publish-question"
                   value="Publish Your Question"
-                  class="button color small submit"
+                  className="button color small submit"
                 />
                 {/* end form submit */}
               </p>
@@ -134,4 +162,10 @@ class SetQuestions extends React.PureComponent {
   }
 }
 
-export default SetQuestions;
+SetQuestions.propTypes = {
+  askQuestions: PropTypes.func.isRequired
+};
+export default connect(
+  null,
+  { askQuestions }
+)(SetQuestions);

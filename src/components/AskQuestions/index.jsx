@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import SetQuestions from "../SetQuestions";
 import Aside from "../Aside";
-class AskQuestions extends Component {
+class AskQuestions extends React.PureComponent {
   render() {
     return (
       <React.Fragment>

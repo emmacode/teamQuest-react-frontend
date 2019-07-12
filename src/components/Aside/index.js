@@ -1,28 +1,78 @@
-import React, { Component } from "react";
-class Aside extends Component {
+import React from "react";
+import { login } from "../../actions/postActions";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+class Aside extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      institution: "",
+      reg_no: "",
+      password: "",
+      remb_me: ""
+    };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+    const post = {
+      institution: this.state.institution,
+      reg_no: this.state.reg_no,
+      password: this.state.password,
+      remb_me: this.state.remb_me
+    };
+    this.props.login(post);
+  }
   render() {
     return (
       <React.Fragment>
         <div class="widget widget_login">
           <h3 class="widget_title">Login</h3>
           <div className="form-style form-style-2">
-            <form>
+            <form onSubmit={this.onSubmit}>
               <div className="form-inputs clearfix">
+                <p>
+                  <select
+                    value={this.state.institution}
+                    onChange={this.onChange}
+                    name="institution"
+                  >
+                    <option value="">Choose your Institution</option>
+                    <option value="Obafemi Awolowo University">
+                      Obafemi Awolowo University
+                    </option>
+                    <option value="University Of Ibadan">
+                      University Of Ibadan
+                    </option>
+                    <option value="University Of Lagos">
+                      University Of Lagos
+                    </option>
+                  </select>
+                </p>
                 <p className="login-text">
                   <input
                     type="text"
-                    value="Matric No"
-                    onfocus="if (this.value == 'Username') {this.value = '';}"
-                    onblur="if (this.value == '') {this.value = 'Username';}"
+                    value={this.state.reg_no}
+                    onChange={this.onChange}
+                    name="reg_no"
                   />
                   <i className="icon-user" />
                 </p>
                 <p className="login-password">
                   <input
                     type="password"
-                    value="Password"
-                    onfocus="if (this.value == 'Password') {this.value = '';}"
-                    onblur="if (this.value == '') {this.value = 'Password';}"
+                    value={this.state.password}
+                    name="password"
+                    onChange={this.onChange}
                   />
                   <i className="icon-lock" />
                   <a href="#">Forget</a>
@@ -37,7 +87,12 @@ class Aside extends Component {
               </p>
               <div className="rememberme">
                 <label>
-                  <input type="checkbox" checked="checked" /> Remember Me
+                  <input
+                    type="checkbox"
+                    value={this.state.remb_me}
+                    name="remb_me"
+                  />{" "}
+                  Remember Me
                 </label>
               </div>
             </form>
@@ -121,4 +176,10 @@ class Aside extends Component {
   }
 }
 
-export default Aside;
+Aside.propTypes = {
+  login: PropTypes.func.isRequired
+};
+export default connect(
+  null,
+  { login }
+)(Aside);
