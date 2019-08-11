@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LoadQuestion from "../LoadQuestion";
-import Aside from "../Aside";
+import Aside from "../../views/Aside";
 class Questions extends Component {
   render() {
     return (

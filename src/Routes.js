@@ -6,8 +6,8 @@ import Home from "./components/Home";
 import AskQuestions from "./components/AskQuestions";
 import Questions from "./components/Questions";
 import Login from "./components/Login";
-import Profile from "./components/Profile";
-import EditProfile from "./components/EditProfile";
+import Profile from "./views/Profile";
+import EditProfile from "./views/EditProfile";
 
 class Main extends Component {
   render() {

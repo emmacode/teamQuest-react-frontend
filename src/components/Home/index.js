@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import LoadQuestions from "../LoadQuestion";
-import Aside from "../Aside/index";
+import Aside from "../../views/Aside/index";
 import "./index.css";
 
 class Home extends Component {
