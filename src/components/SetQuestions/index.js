@@ -1,8 +1,10 @@
 import React from "react";
-import { askQuestions } from "../../actions/postActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import CKEditor from "ckeditor4-react";
+
+import { askQuestions } from "../../store/actions/postActions";
+
 class SetQuestions extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -15,11 +17,13 @@ class SetQuestions extends React.PureComponent {
     this._handleChange = this._handleChange.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
   }
+
   _handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
     });
   }
+
   _handleSubmit(e) {
     e.preventDefault();
     const post = {
@@ -27,8 +31,10 @@ class SetQuestions extends React.PureComponent {
       course: this.state.course,
       questionPoll: this.state.questionPoll
     };
+
     this.props.askQuestions(post);
   }
+
   render() {
     return (
       <React.Fragment>
@@ -88,12 +94,12 @@ class SetQuestions extends React.PureComponent {
                 {/* end course */}
                 {/* optional question */}
                 <p className="question_poll_p">
-                  <label for="question_poll">Optional Questions</label>
+                  <label>Optional Questions</label>
                   <input
                     type="checkbox"
                     id="question_poll"
                     value={this.state.questionPoll}
-                    onchange={this._handleChange}
+                    onChange={this._handleChange}
                     name="question_poll"
                   />
                   <span className="question_poll">
@@ -138,12 +144,14 @@ class SetQuestions extends React.PureComponent {
                   </span>
                 </p>
               </div> */}
+
               <div>
                 <CKEditor data="<p>Hello from CKEditor 4!</p>" />
               </div>
+
               {/* end form text-area */}
               {/* form submit */}
-              <p class="form-submit">
+              <p className="form-submit">
                 <input
                   type="submit"
                   id="publish-question"
@@ -165,6 +173,7 @@ class SetQuestions extends React.PureComponent {
 SetQuestions.propTypes = {
   askQuestions: PropTypes.func.isRequired
 };
+
 export default connect(
   null,
   { askQuestions }

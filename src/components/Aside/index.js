@@ -1,10 +1,13 @@
 import React from "react";
-import { login } from "../../actions/postActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
+import { login } from "../../store/actions/postActions";
+
 class Aside extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       institution: "",
       reg_no: "",
@@ -24,19 +27,22 @@ class Aside extends React.PureComponent {
 
   onSubmit(e) {
     e.preventDefault();
+
     const post = {
       institution: this.state.institution,
       reg_no: this.state.reg_no,
       password: this.state.password,
       remb_me: this.state.remb_me
     };
+
     this.props.login(post);
   }
+
   render() {
     return (
       <React.Fragment>
-        <div class="widget widget_login">
-          <h3 class="widget_title">Login</h3>
+        <div className="widget widget_login">
+          <h3 className="widget_title">Login</h3>
           <div className="form-style form-style-2">
             <form onSubmit={this.onSubmit}>
               <div className="form-inputs clearfix">
@@ -179,6 +185,7 @@ class Aside extends React.PureComponent {
 Aside.propTypes = {
   login: PropTypes.func.isRequired
 };
+
 export default connect(
   null,
   { login }

@@ -1,5 +1,5 @@
 import React from "react";
-import { login } from "../../actions/postActions";
+import { login } from "../../store/actions/postActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 

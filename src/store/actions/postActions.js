@@ -1,5 +1,7 @@
 import { FETCH_POSTS, NEW_POST, LOGIN, ASK_QUESTION } from "./types";
+
 const BASE_URL = "http://localhost:8000/api";
+
 //ASK_QUESTION state
 export const askQuestions = postData => dispatch => {
   console.log("submitting question");
@@ -20,6 +22,7 @@ export const askQuestions = postData => dispatch => {
     });
 };
 //end ask_question state
+
 //login state
 export const login = postData => dispatch => {
   fetch(BASE_URL + "/login", {
@@ -39,6 +42,7 @@ export const login = postData => dispatch => {
     });
 };
 //end login state
+
 //fectch_post state
 export const fetchPosts = () => dispatch => {
   console.log("fetching");
@@ -70,6 +74,7 @@ export const fetchPosts = () => dispatch => {
   });
 };
 //end fetch_post
+
 //createPost state
 export const createPost = postData => dispatch => {
   console.log("action called");
