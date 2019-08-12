@@ -8,6 +8,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 
+import "./index.css";
 import { fetchPosts } from "../../store/actions/postActions";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -32,7 +33,20 @@ const styles = theme => ({
 
 class LoadQuestions extends React.Component {
   state = {
-    value: 0
+    value: 0,
+    count: 0
+  };
+
+  _handleIncrease = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
+  _handleDecrease = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
   };
 
   componentWillMount() {
@@ -54,9 +68,42 @@ class LoadQuestions extends React.Component {
     const { value } = this.state;
 
     const postItems = this.props.posts.map((post, index) => (
-      <div key={index}>
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
+      <div key={index} className="tab-inner-warp">
+        <div className="tab-inner">
+          <div className="Load__question Load__question-type-norm">
+            <h2>{post.title}</h2>
+            {/* <!-- Vote Shit --> */}
+            <div className="vote-up">
+              <div
+                original-title="This answer is useful"
+                className="question-author-vote tooltip-n"
+                value="Increase Value"
+              >
+                <span />
+                <div onClick={this._handleIncrease} />
+              </div>
+            </div>
+            {/* <!-- vote value --> */}
+            <div className="number-vote">{this.state.count}</div>
+            {/* <!-- end of vote value --> */}
+            {/* <!-- vote down --> */}
+            <div className="vote-down">
+              <div
+                original-title="This answer is not useful"
+                class="question-author-vote-down tooltip-s"
+                value="Decrease Value"
+                onClick="decreaseValue()"
+              >
+                <span />
+                <div onClick={this._handleDecrease} />
+              </div>
+            </div>
+            {/* <!-- End vote shit --> */}
+            <div className="Load__question-inner">
+              <p className="Load__question-desc">{post.body}</p>
+            </div>
+          </div>
+        </div>
       </div>
     ));
 

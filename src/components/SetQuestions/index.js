@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import CKEditor from "ckeditor4-react";
 
 import { askQuestions } from "../../store/actions/postActions";
+import "./index.css";
 
 class SetQuestions extends React.PureComponent {
   constructor(props) {
@@ -38,8 +39,8 @@ class SetQuestions extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <div className="page-content ask-question">
-          <div className="boxedtitle page-title">
+        <div className="Setquestions__page-content Setquestions__ask-question">
+          <div className="Setquestions__boxedtitle page-title">
             <h2>Ask Question</h2>
           </div>
           <p>
@@ -48,9 +49,12 @@ class SetQuestions extends React.PureComponent {
             eright fomulaes and symbols
           </p>
           {/* form style */}
-          <div className="form-style form-style-3" id="question-submit">
+          <div
+            className="Setquestions__form-style Setquestions__form-style-3"
+            id="question-submit"
+          >
             <form onSubmit={this._handleSubmit}>
-              <div className="form-inputs clearfix">
+              <div className="Setquestions__form-inputs clearfix">
                 {/* question title */}
                 <p>
                   <label className="required">
@@ -151,12 +155,12 @@ class SetQuestions extends React.PureComponent {
 
               {/* end form text-area */}
               {/* form submit */}
-              <p className="form-submit">
+              <p className="Setquestions__form-submit">
                 <input
                   type="submit"
                   id="publish-question"
                   value="Publish Your Question"
-                  className="button color small submit"
+                  className="btn small submit"
                 />
                 {/* end form submit */}
               </p>

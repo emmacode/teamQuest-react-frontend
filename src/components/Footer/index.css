@@ -1,0 +1,139 @@
+/* footer */
+#footer {
+  background-color: #2f3239;
+  margin-top: 70px;
+  padding: 50px 0 30px;
+}
+#footer .Footer__widget {
+  color: #c2c8d4;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.Footer__widget h3.Footer__widget_title {
+  margin: 0 0 20px;
+  background: transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  border-bottom: none;
+  font-size: 18px;
+  color: #21a654;
+  font-weight: bold;
+  position: relative;
+}
+
+.Footer__widget_contact ul li span {
+  color: #21a654 !important;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Footer__widget ul {
+  margin: 0;
+  list-style: none;
+}
+
+.Footer__widget ul li {
+  position: relative;
+  overflow: hidden;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+#footer .Footer__widget ul li {
+  padding-bottom: 5px;
+}
+
+#footer .Footer__widget li {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.Footer__widget .related_posts {
+  padding: 0 !important;
+  border: none;
+  box-shadow: none;
+}
+
+.related_posts li {
+  margin-bottom: 10px;
+}
+
+.related_posts li i {
+  margin: 0 5px 5px 0;
+  color: #2f3239;
+}
+
+.related_posts li:last-child {
+  margin-bottom: 0;
+}
+
+.related_posts li a {
+  color: #2f3239;
+}
+
+.related_item {
+  overflow: hidden;
+}
+
+.related_item h3 {
+  padding-top: 2px;
+  font-size: 14px !important;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.related_item p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #848991;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+.related_item span {
+  font-size: 12px;
+  color: #c5c4c4;
+}
+
+#footer .Footer__widget a {
+  color: #c2c8d4;
+}
+#footer .related_item p {
+  color: #c2c8d4;
+}
+#Footer__footer_bottom {
+  background-color: #353940;
+  padding: 16px 0;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.Footer__copyrights {
+  font-size: 13px;
+}
+.go-up {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px;
+  right: -60px;
+  bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 998;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}

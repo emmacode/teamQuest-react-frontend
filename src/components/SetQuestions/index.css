@@ -1,0 +1,156 @@
+.Setquestions__page-content {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #dedede;
+  background: #fff;
+  box-shadow: 0 0 5px #dedede;
+}
+
+.Setquestions__page-content p {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.Setquestions__boxedtitle .page-title {
+  box-shadow: none;
+  background: transparent;
+  position: relative;
+  margin-bottom: 10px !important;
+  margin: -20px -20px 20px;
+  padding-left: 20px;
+  border-bottom: 0;
+}
+
+.Setquestions__boxedtitle .page-title h2 {
+  color: #21a654 !important;
+  padding: 20px 0 10px;
+  margin: 0 20px 20px 0;
+  border-bottom: 2px solid #dedede;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Setquestions__ask-question .Setquestions__form-style label {
+  float: left;
+  color: #2f3239;
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 1%;
+  margin-top: 9px;
+}
+
+.Setquestions__form-style input {
+  display: block;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Setquestions__form-style span {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+  color: #848991;
+}
+
+.Setquestions__ask-question .form-description {
+  width: 80%;
+  display: inline-block;
+}
+
+#question-submit .Setquestions__form-inputs p {
+  margin-bottom: 30px;
+}
+
+.Setquestions__form-style-3 .Setquestions__form-inputs p {
+  width: 100% !important;
+  margin-right: 0;
+  float: none;
+}
+
+.Setquestions__form-inputs p {
+  overflow: hidden;
+  height: 100%;
+}
+
+.Setquestions__ask-question .form-description {
+  width: 80%;
+  display: inline-block;
+}
+
+#question-title {
+  float: left;
+}
+
+input[type="text"] {
+  color: #21a654 !important;
+}
+
+.taglist .input input {
+  width: 100% !important;
+}
+
+.poll-li {
+  overflow: hidden;
+  position: relative;
+}
+
+.del-poll-li {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 29px;
+  font-size: 14.5px;
+  height: 29px;
+  width: 29px;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background-color: #2f3239;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.move-poll-li {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 0;
+  font-size: 12px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #bdbbbb;
+}
+
+.poll-li input[type="text"] {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#publish-question {
+  width: 100%;
+}
+
+.Setquestions__form-submit input [type="submit"] {
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn {
+  box-shadow: none !important;
+  padding: 10px !important;
+  background-color: #21a654 !important;
+  transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear,
+    background-color 0.1s linear;
+  color: #fff;
+}
+
+.btn .small {
+  padding: 7px 15px;
+}

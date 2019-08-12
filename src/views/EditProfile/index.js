@@ -1,5 +1,7 @@
 import React from "react";
+
 import Aside from "../Aside";
+
 class EditProfile extends React.PureComponent {
   render() {
     return (

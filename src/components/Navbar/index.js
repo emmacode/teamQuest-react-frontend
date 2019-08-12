@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./index.css";
+
 class Navbar extends React.PureComponent {
   render() {
     return (
-      <header id="header" className="index-no-box">
+      <header id="header" className="Navbar__header">
         <section className="container clearfix">
           <div className="logo">
             <NavLink to="/">ProjecE</NavLink>

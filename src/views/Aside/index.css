@@ -1,0 +1,280 @@
+.Aside__widget {
+  margin-bottom: 30px !important;
+  color: #2f3239;
+  padding: 20px !important;
+  border: 1px solid #dedede;
+  background: #fff;
+  box-shadow: 0 0 5px #dedede;
+}
+
+.Aside__widget ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Aside__widget ul li {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.Aside__widget ul li h6 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Aside__widget_highest_points li h6 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.Aside__widget-highest-points li h6 a {
+  color: #21a654;
+}
+
+/* login widget */
+.Aside__widget-login .Aside__form-style-2 .Aside__form-inputs p {
+  width: 100% !important;
+  margin-right: 0;
+  float: none;
+  overflow: hidden;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.Aside__form-style label {
+  font-weight: bold;
+}
+
+.Aside__form-inputs p {
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+}
+
+.Aside__form-inputs p:last-child {
+  margin-right: 0;
+}
+
+.Aside__widget-login input[type="text"],
+.Aside__widget-login input[type="password"] {
+  display: block;
+  margin: 0;
+  max-width: 100% !important;
+  color: #2f3239;
+  font-size: 12px;
+  border: 1px solid #21a654;
+  border-radius: 2px;
+  font-weight: bold;
+  padding: 8px 8px 8px 37px;
+  transition: border 0.25s linear, color 0.25s linear,
+    background-color 0.25s linear;
+}
+
+.Aside__login-text {
+  position: relative;
+}
+
+.Aside__login-password {
+  position: relative;
+}
+
+.Aside__login-password a {
+  background-color: #2f3239;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  padding: 0 10px;
+  font-size: 11px;
+  border-radius: 2px;
+  color: #fff;
+}
+.Aside__form-inputs select {
+  padding: 8px;
+  outline: none;
+  display: block;
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  box-sizing: border-box;
+  line-height: inherit;
+  border-radius: 0;
+  -webkit-appearance: button;
+  color: #21a654;
+  border: 1px solid #dedede;
+  transition: border 0.25s linear, color 0.25s linear,
+    background-color 0.25s linear;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+.Aside__form-style input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.Aside__form-style label {
+  display: block;
+  margin-top: 9px;
+}
+
+.Aside__form-style input[type="checkbox"] {
+  float: left;
+  margin: 2px 10px 0 1px;
+  background-color: #21a654;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 3px;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  vertical-align: baseline;
+  width: 16px !important;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+.Aside__form-submit input[type="submit"] {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Aside__button .Aside__color {
+  background-color: #21a654;
+}
+
+.Aside_login-submit {
+  width: 100% !important;
+  font-size: 15px !important;
+}
+
+.Aside__button.small {
+  padding: 7px 15px;
+}
+
+.Aside__widget h3.Aside__widget-title {
+  color: #21a654;
+  margin: -20px 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 0 10px;
+  border-bottom: 2px solid #dedede;
+  position: relative;
+}
+
+.Aside__widget-tag-cloud a {
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  line-height: 20px;
+  color: #fff !important;
+  margin: 0 0 5px 0 !important;
+  padding: 2px 10px;
+  font-size: 12px !important;
+  background-color: #2f3239;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.Aside__widget-tag-cloud a:hover {
+  background-color: #00c851 !important;
+}
+
+.signup {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  border: none;
+}
+
+.Aside__register a:hover {
+  outline: none !important;
+  background-color: #373b43 !important;
+}
+
+.btn {
+  box-shadow: none !important;
+  padding: 10px !important;
+  background-color: #21a654 !important;
+}
+
+/* highest points widget */
+/* Highest points Widget */
+.Aside__widget-highest-points ul li {
+  padding-bottom: 15px;
+  list-style: none;
+}
+.Aside__widget-highest-points li h6 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+.Aside__widget-highest-points li h6 a:hover {
+  color: #2f3239;
+}
+.Aside__widget-highest-points .comment {
+  padding: 0;
+  border-bottom: 0;
+  color: #2f3239;
+  font-size: 13px;
+}
+.Aside__author-img {
+  float: left;
+  display: block;
+  width: 71px;
+  height: 71px;
+  position: relative;
+  margin-right: 20px;
+  overflow: hidden;
+  padding: 2px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+}
+.Aside__author-img img {
+  display: block;
+  float: left;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.Aside__widget-highest-points a:before {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  top: 2px;
+  z-index: 99;
+  display: block;
+  font-family: "FontAwesome";
+  text-align: center;
+  line-height: 65px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.Aside__widget-highest-points .Aside__author-img a:hover:before {
+  content: "\f0fe";
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.Aside__rememberme {
+  float: left;
+}
+.Aside__rememberme label {
+  margin: 0;
+  display: inline;
+  font-size: 13px;
+  color: #21a654;
+  padding-left: 5px;
+}

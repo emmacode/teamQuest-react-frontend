@@ -1,0 +1,106 @@
+* {
+  outline: none;
+}
+
+input {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+  transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear,
+    background-color 0.1s linear;
+}
+
+link {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 20px 0;
+  line-height: 22px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+}
+
+label {
+  cursor: pointer;
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+div {
+  margin: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+input[type="text"] {
+  padding: 8px;
+  outline: none;
+  font-size: 13px;
+  font-weight: 600;
+  max-width: 100%;
+  border: 1px solid #dedede;
+  transition: border 0.25s linear, color 0.25s linear,
+    background-color 0.25s linear;
+  background: #f3f3f3;
+  border-radius: 2px;
+}

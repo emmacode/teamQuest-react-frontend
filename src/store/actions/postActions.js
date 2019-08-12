@@ -56,16 +56,19 @@ export const fetchPosts = () => dispatch => {
   //   );
   let posts = [
     {
-      title: "Hello worldd",
-      body: "test post 001"
+      title: "This Is My First Normal Question",
+      body:
+        "Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit."
     },
     {
-      title: "Hello worldd",
-      body: "test post 001"
+      title: "This Is My Second Poll Question",
+      body:
+        "Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit."
     },
     {
-      title: "Hello worldd",
-      body: "test post 001"
+      title: "This Is My Third Poll Question",
+      body:
+        "Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit."
     }
   ];
   dispatch({

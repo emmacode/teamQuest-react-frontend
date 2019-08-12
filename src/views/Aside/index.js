@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import "./index.css";
 import { login } from "../../store/actions/postActions";
 
 class Aside extends React.PureComponent {
@@ -41,11 +42,11 @@ class Aside extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <div className="widget widget_login">
-          <h3 className="widget_title">Login</h3>
-          <div className="form-style form-style-2">
+        <div className="Aside__widget Aside__widget-login">
+          <h3 className="Aside__widget-title">Login</h3>
+          <div className="Aside__form-style Aside__form-style-2">
             <form onSubmit={this.onSubmit}>
-              <div className="form-inputs clearfix">
+              <div className="Aside__form-inputs clearfix">
                 <p>
                   <select
                     value={this.state.institution}
@@ -64,7 +65,7 @@ class Aside extends React.PureComponent {
                     </option>
                   </select>
                 </p>
-                <p className="login-text">
+                <p className="Aside__login-text">
                   <input
                     type="text"
                     value={this.state.reg_no}
@@ -73,7 +74,7 @@ class Aside extends React.PureComponent {
                   />
                   <i className="icon-user" />
                 </p>
-                <p className="login-password">
+                <p className="Aside__login-password">
                   <input
                     type="password"
                     value={this.state.password}
@@ -84,14 +85,14 @@ class Aside extends React.PureComponent {
                   <a href="#">Forget</a>
                 </p>
               </div>
-              <p className="form-submit login-submit">
+              <p className="Aside__form-submit Aside__login-submit">
                 <input
                   type="submit"
                   value="Log in"
-                  className="button color small login-submit submit"
+                  className="btn btn-success Aside__button Aside__color small Aside__login-submit submit"
                 />
               </p>
-              <div className="rememberme">
+              <div className="Aside__rememberme">
                 <label>
                   <input
                     type="checkbox"
@@ -102,48 +103,31 @@ class Aside extends React.PureComponent {
                 </label>
               </div>
             </form>
-            <ul className="login-links login-links-r">
-              <li>
-                <a href="#">Register</a>
-              </li>
-            </ul>
             <div className="clearfix" />
           </div>
         </div>
-        {/* stats */}
-        <div className="widget widget_stats">
-          <h3 className="widget_title">Your Stats</h3>
-          <div className="ul_list ul_list-icon-ok">
-            <ul>
-              <li>
-                <i className="icon-question-sign" />
-                Questions ( <span>20</span> )
-              </li>
-              <li>
-                <i className="icon-comment" />
-                Answers ( <span>50</span> )
-              </li>
-            </ul>
-          </div>
-        </div>
-        {/* end stats */}
+
         {/* courses */}
-        <div className="widget widget_tag_cloud">
-          <h3 className="widget_title">Courses</h3>
+        <div className="Aside__widget Aside__widget-tag-cloud">
+          <h3 className="Aside__widget-title">Courses</h3>
           <a href="#">MTH101</a>
           <a href="#">CSC201</a>
           <a href="#">PHY101</a>
           <a href="#">CHM109</a>
           <a href="#">PHL201</a>
           <a href="#">UCJ213</a>
+          <div className="Aside__register">
+            <a className="btn btn-success small signup">View More</a>
+          </div>
         </div>
         {/* end courses */}
+
         {/* points */}
-        <div className="widget widget_highest_points">
-          <h3 className="widget_title">Highest points</h3>
+        <div className="Aside__widget Aside__widget-highest-points">
+          <h3 className="Aside__widget-title">Leaderboard</h3>
           <ul>
             <li>
-              <div className="author-img">
+              <div className="Aside__author-img">
                 <a href="#">
                   <img
                     width="60"
@@ -159,7 +143,7 @@ class Aside extends React.PureComponent {
               <span className="comment">12 Points</span>
             </li>
             <li>
-              <div className="author-img">
+              <div className="Aside__author-img">
                 <a href="#">
                   <img
                     width="60"
